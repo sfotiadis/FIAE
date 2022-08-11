@@ -1,0 +1,30 @@
+{
+"Einleitung" : {
+	"Zitat": "Nicht mit Erfindungen, sondern mit Verbesserungen macht man Vermögen. - Henry Ford",
+	"Software-Engineering" : {
+		"Begrifflichkeiten": {
+			"Software-Engineering": "Oberbegriff; fasst sämtliche Arbeitsschritte der prof. Softwareentwicklung zusammen",
+			"Engineering": "Wissen aus Ingenieurswissenschaften wird zur Softwareentwicklung angewandt",
+			"Softwarekrise": "Mitte der 60er Jahre überstiegen die Entwicklungskosten häufig die Anschaffungskosten; Die damaligen Entwicklungsmethoden konnten nicht mit der Weiterentwicklung der Hardware mithalten"
+		},
+		"Konsequenz": "neue Verfahren wurden entwickelt, u.A. OOA, OOD und OOP",
+		"Verfahren" : {
+			"OOA": "Objektorientierte Analyse",
+			"OOD": "Objektorientiertes Design",
+			"OOP": "Objektorientierte Programmierung"
+		},
+		"Ansatz": "reale Elemente werden programmatisch abgebildet",
+		"Ursprünge": "Smalltalk"
+	}
+},
+"Überblick (11.1)": {
+	"Entwicklungszyklus" : {
+		"Projektphasen/Projektmanagement": {
+			"Planung": ["Projektvorgaben", "Lastenheft", "Pflichtenheft"],
+			"Analyse": {
+				
+			}
+		}
+	}
+}
+}
