@@ -28,11 +28,11 @@
                 },
                 "2. Analyse": {
                     "allgemein": "Projektgegenstand wird untersucht",
-                    "Definition": ["Geschäftsprozesse","Elemente", "Daten"]
+                    "definiert": ["Geschäftsprozesse","Elemente", "Daten"]
                 },
                 "3. Entwurf":{ 
                     "allgemein": "Entwicklung eines Modells/einer Arbeitsvorlage",
-                    "Definition": ["einheitlicher Schnittstellen", "gemeinsame Konventionen"]
+                    "definiert": ["einheitlicher Schnittstellen", "gemeinsame Konventionen"]
                 },
                 "4. Implementierung": "Umsetzung des Entwurfs in Programmcode",
                 "5. Test": {
