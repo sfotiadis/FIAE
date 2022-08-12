@@ -1,30 +1,102 @@
 {
-"Einleitung" : {
-	"Zitat": "Nicht mit Erfindungen, sondern mit Verbesserungen macht man Vermögen. - Henry Ford",
-	"Software-Engineering" : {
-		"Begrifflichkeiten": {
-			"Software-Engineering": "Oberbegriff; fasst sämtliche Arbeitsschritte der prof. Softwareentwicklung zusammen",
-			"Engineering": "Wissen aus Ingenieurswissenschaften wird zur Softwareentwicklung angewandt",
-			"Softwarekrise": "Mitte der 60er Jahre überstiegen die Entwicklungskosten häufig die Anschaffungskosten; Die damaligen Entwicklungsmethoden konnten nicht mit der Weiterentwicklung der Hardware mithalten"
-		},
-		"Konsequenz": "neue Verfahren wurden entwickelt, u.A. OOA, OOD und OOP",
-		"Verfahren" : {
-			"OOA": "Objektorientierte Analyse",
-			"OOD": "Objektorientiertes Design",
-			"OOP": "Objektorientierte Programmierung"
-		},
-		"Ansatz": "reale Elemente werden programmatisch abgebildet",
-		"Ursprünge": "Smalltalk"
-	}
-},
-"Überblick (11.1)": {
-	"Entwicklungszyklus" : {
-		"Projektphasen/Projektmanagement": {
-			"Planung": ["Projektvorgaben", "Lastenheft", "Pflichtenheft"],
-			"Analyse": {
-				
-			}
-		}
-	}
-}
-}
+    "Einleitung" : {
+        "Zitat": "Nicht mit Erfindungen, sondern mit Verbesserungen macht man Vermögen. - Henry Ford",
+        "Software-Engineering" : {
+            "Begrifflichkeiten": {
+                "Software-Engineering": "Oberbegriff; fasst sämtliche Arbeitsschritte der prof. Softwareentwicklung zusammen",
+                "Engineering": "Wissen aus Ingenieurswissenschaften wird zur Softwareentwicklung angewandt",
+                "Softwarekrise": "Mitte der 60er Jahre überstiegen die Entwicklungskosten häufig die Anschaffungskosten; Die damaligen Entwicklungsmethoden konnten nicht mit der Weiterentwicklung der Hardware mithalten"
+            },
+            "Konsequenz": "neue Verfahren wurden entwickelt, u.A. OOA, OOD und OOP",
+            "Verfahren" : {
+                "OOA": "Objektorientierte Analyse",
+                "OOD": "Objektorientiertes Design",
+                "OOP": "Objektorientierte Programmierung"
+            },
+            "Ansatz": "reale Elemente werden programmatisch abgebildet",
+            "Ursprünge": "Programmiersprache Smalltalk"
+        }
+    },
+    "Überblick (11.1)": {
+        "Entwicklungszyklus" : {
+            "Projektphasen": {
+                "1. Planung": {
+                    "allgemein": ["Projektvorgaben", "Lastenheft", "Pflichtenheft"],
+                    "Kleinprojekte": ["Notizen in Textdokument", "kommentare im Programmcode"],
+                    "bei mehreren Personen": "Absprachen über einen bestimmten Kommentarstil und Verschriftlichung (Mindeststandard)",
+                    "Fixierung aller Informationen": "Grundlage für benutzbare Dokumentation"
+                },
+                "2. Analyse": {
+                    "allgemein": "Projektgegenstand wird untersucht",
+                    "Definition": ["Geschäftsprozesse","Elemente", "Daten"]
+                },
+                "3. Entwurf":{ 
+                    "allgemein": "Entwicklung eines Modells/einer Arbeitsvorlage",
+                    "Definition": ["einheitlicher Schnittstellen", "gemeinsame Konventionen"]
+                },
+                "4. Implementierung": "Umsetzung des Entwurfs in Programmcode",
+                "5. Test": {
+                    "Überprüfung von": ["technische Korrektheit", "Erfüllung der Vorgaben", "Benutzbarkeit durch Zielgruppe"],
+                    "Bei Bedarf": "Rücksprung an frühere Entwicklungsphase"
+                },
+                "6. Dokumentation": {
+                    "allgemein": "Informationen oder Handbücher",
+                    "für": {
+                        "Entwickler": "zur Weiterentwicklung",
+                        "Administratoren": ["Installation", "Konfiguration","Anpassung"],
+                        "Endanwender": "Erläuterung der Funktionen"
+                    }
+                }
+            },
+            "Entwicklungsreihenfolgen": {
+                "grundlegende":{
+                    "linear": {
+                        "Wasserfallmodell": ["klassische Idealvorstellung", "jeder Schritt nacheinander"]
+                    },
+                    "iterativ": {
+                        "Spiralmodell": ["modernes Verfahren", "Phasen werden mehrfach durchlaufen"]
+                    }
+                },
+                "agile": {
+                    "durchläufe": "so kurz wie möglich",
+                    "Beispiel": {
+                        "Extreme Programming": ["häufiger release", "Änderungswünsche können jederzeit berücksichtigt werden"]
+                    }
+                }
+            },
+            "Praxis": "klare zeitliche Abfolgen der Phasen werden selten eingehalten",
+            "Gefahren": "erst in einer späten Phase wird bemerkt, dass Projektziele verfehlt werden",
+            "Mögliche exteme Lösung": {
+                "Test-driven Development": "zuerst werden Tests geschrieben und danach folgt die eigentliche Implementierung"
+            }
+    
+        },
+        "Projektmanagement": {
+            "allgemein": "Gesamtheit von Führungsaufgaben, -organisation, -techniken und -mitteln für die Abwicklung eines Projektes. (DIN 69901)",
+            "Wissensfelder":{
+                "Integrationsmanagement": {
+                    "koordiniert": ["Projektbestandteile", "Projektbeteiligten"]
+                },
+                "Umfangsmanagement": {
+                    "englisch": "Scope Management",
+                    "überwacht": {
+                        "Projektzustand": ["Ziele", "Vorgaben"]
+                    },
+                    "notwendige Zieländerung": "gelegentlich erst während des Projektablaufs erkannt"
+                },
+                "Zeitmanagement": {
+                    "achtet auf": "Einhaltung des Projektzeitplans",
+                    "praktische technik":{
+                        "Netzplan": "stellt Aufgaben in Zeitliche Beziehungen zueinander"
+                    }
+                },
+                "Kostenmanagement": "",
+                "Qualitätsmanagement": "",
+                "Ressourcenmanagement": "",
+                "Kommunikationsmanagement": "",
+                "Risikomanagement": "",
+                "Beschaffungsmanagement": ""
+            }
+        }
+    }
+    }
