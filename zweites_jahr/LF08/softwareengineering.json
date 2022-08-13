@@ -1,4 +1,32 @@
 {
+    "Kerninhalte": {
+        "allgemein": "Methoden der Softwareentwicklung nach dem Vorbild der Ingenieurswissenschaften",
+        "Entwicklungsverlauf": {
+            "linear": "Wasserfallmodell",
+            "iterativ": "Spiralmodell"
+        },
+        "Phasen": ["Planung", "Analyse", "Entwurf", "Implementierung", "Test","Dokumentation"],
+        "Phasenausprägung": {
+            "variiert je nach": ["Projektgröße", "Teamgröße", "Entwicklungsprozess"]
+        },
+        "Entwicklungsprozesse":{
+            "Eignung": {
+                "Abhängig von": ["Projektgröße", "Teamzusammensetzung", "technische Vorgaben"]
+            },
+            "Arten": {
+                "Unified Process": "setzt UML ein",
+                "Extreme Programming": ["Programmierarbeit steht im mittelpunkt", "flexibel bei Änderungen", "schnelle Ergebnisse"]
+            }
+        },
+        "Arbeitsmittel": {
+            "UML": "Unified Modeling Language",
+            "Entwurfsmuster": "Design Patterns; ",
+            "Unit-Tests":{
+                "allgemein": "Testen von Software",
+                "Test-first-Ansatz": ["Code funktioniert jederzeit", "jede Klasse besitzt einen Test"]
+            }
+        }
+    },
     "Einleitung" : {
         "Zitat": "Nicht mit Erfindungen, sondern mit Verbesserungen macht man Vermögen. - Henry Ford",
         "Software-Engineering" : {
