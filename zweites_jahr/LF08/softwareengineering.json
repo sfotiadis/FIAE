@@ -5,7 +5,7 @@
             "linear": "Wasserfallmodell",
             "iterativ": "Spiralmodell"
         },
-        "Phasen": ["Planung", "Analyse", "Entwurf", "Implementierung", "Test","Dokumentation"],
+        "Projektphasen": ["Planung", "Analyse", "Entwurf", "Implementierung", "Test","Dokumentation"],
         "Phasenausprägung": {
             "variiert je nach": ["Projektgröße", "Teamgröße", "Entwicklungsprozess"]
         },
@@ -77,8 +77,8 @@
                     }
                 }
             },
-            "Entwicklungsreihenfolgen": {
-                "grundlegende":{
+            "Entwicklungsverlauf": {
+                "grundlegend":{
                     "linear": {
                         "Wasserfallmodell": ["klassische Idealvorstellung", "jeder Schritt nacheinander"]
                     },
