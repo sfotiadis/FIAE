@@ -3,18 +3,19 @@
         "Zitat": "Nicht mit Erfindungen, sondern mit Verbesserungen macht man Vermögen. - Henry Ford",
         "Software-Engineering" : {
             "Begrifflichkeiten": {
-                "Software-Engineering": "Oberbegriff; fasst sämtliche Arbeitsschritte der prof. Softwareentwicklung zusammen",
-                "Engineering": "Wissen aus Ingenieurswissenschaften wird zur Softwareentwicklung angewandt",
-                "Softwarekrise": "Mitte der 60er Jahre überstiegen die Entwicklungskosten häufig die Anschaffungskosten; Die damaligen Entwicklungsmethoden konnten nicht mit der Weiterentwicklung der Hardware mithalten"
+                "Software-Engineering": "gesamtheit der Arbeitsschritte der prof. Softwareentwicklung",
+                "Engineering": "Ingenieurswissenschaftliche Expertise auf Softwareentwicklung angewandt",
+                "Softwarekrise": ["Mitte 60er Jahre", "Entwicklungskosten > Anschaffungskosten", "Entwicklungsmethoden < Weiterentwicklung der Hardware"]
             },
-            "Konsequenz": "neue Verfahren wurden entwickelt, u.A. OOA, OOD und OOP",
-            "Verfahren" : {
-                "OOA": "Objektorientierte Analyse",
-                "OOD": "Objektorientiertes Design",
-                "OOP": "Objektorientierte Programmierung"
-            },
-            "Ansatz": "reale Elemente werden programmatisch abgebildet",
-            "Ursprünge": "Programmiersprache Smalltalk"
+            "Konsequenz": {
+                "neuentwickelte Verfahren": {
+                    "OOA": "Objektorientierte Analyse",
+                    "OOD": "Objektorientiertes Design",
+                    "OOP": "Objektorientierte Programmierung"
+                },
+                "Ansatz": "reale Elemente werden programmatisch abgebildet",
+                "Ursprünge": "Programmiersprache Smalltalk"
+            }
         }
     },
     "Überblick (11.1)": {
@@ -73,6 +74,7 @@
         },
         "Projektmanagement": {
             "allgemein": "Gesamtheit von Führungsaufgaben, -organisation, -techniken und -mitteln für die Abwicklung eines Projektes. (DIN 69901)",
+            "durchführung": "kontinuierlich",
             "Wissensfelder":{
                 "Integrationsmanagement": {
                     "koordiniert": ["Projektbestandteile", "Projektbeteiligten"]
@@ -86,16 +88,36 @@
                 },
                 "Zeitmanagement": {
                     "achtet auf": "Einhaltung des Projektzeitplans",
-                    "praktische technik":{
-                        "Netzplan": "stellt Aufgaben in Zeitliche Beziehungen zueinander"
+                    "techniken":{
+                        "Netzplan": ["stellt Aufgaben in Zeitliche Beziehungen (Reihenfolgen) zueinander", "kann tatsächliche Dauer nicht grafisch darstellen"],
+                        "Gantt-Diagramm":"Abläufe werden als Balken dargestellt"
                     }
                 },
-                "Kostenmanagement": "",
-                "Qualitätsmanagement": "",
-                "Ressourcenmanagement": "",
-                "Kommunikationsmanagement": "",
-                "Risikomanagement": "",
-                "Beschaffungsmanagement": ""
+                "Kostenmanagement": {
+                    "kontrolliert und reguliert": "Kosten im Rahmen des Budgets"
+                },
+                "Qualitätsmanagement": {
+                    "gewährleistet": "bestimmten Qualitätsstandard"
+                },
+                "Ressourcenmanagement": {
+                    "steuert": ["Teammitglieder", "Arbeitsmittel"]
+                },
+                "Kommunikationsmanagement": {
+                    "ist": "Abteilungs- und Hierarchieübergreifend", 
+                    "regelt und legt fest": ["Kommunikationsmittel", "Kommunikationsstandards"]
+                },
+                "Risikomanagement": {
+                    "umfasst": "weitsichtige Notfallplanung",
+                    "reagiert flexibel auf": {
+                        "ausfall": ["Teammitglieder", "Arbeitsmittel"]
+                    }
+                },
+                "Beschaffungsmanagement": {
+                    "verhindert": "Verzögerungen",
+                    "koordiniert": {
+                        "Arbeitsmittel-": ["Kapazitäten", "Nachbestellungen", "Lieferzeiten"]
+                    }
+                }
             }
         }
     }
