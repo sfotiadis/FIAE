@@ -7,7 +7,7 @@
                 "Engineering": "Ingenieurswissenschaftliche Expertise auf Softwareentwicklung angewandt",
                 "Softwarekrise": ["Mitte 60er Jahre", "Entwicklungskosten > Anschaffungskosten", "Entwicklungsmethoden < Weiterentwicklung der Hardware"]
             },
-            "Konsequenz": {
+            "Konsequenz der Softwarekrise": {
                 "neuentwickelte Verfahren": {
                     "OOA": "Objektorientierte Analyse",
                     "OOD": "Objektorientiertes Design",
