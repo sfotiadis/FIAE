@@ -59,7 +59,7 @@
                     }
                 },
                 "agile": {
-                    "durchläufe": "so kurz wie möglich",
+                    "Durchläufe": "so kurz wie möglich",
                     "Beispiel": {
                         "Extreme Programming": ["häufiger release", "Änderungswünsche können jederzeit berücksichtigt werden"]
                     }
@@ -74,7 +74,7 @@
         },
         "Projektmanagement": {
             "allgemein": "Gesamtheit von Führungsaufgaben, -organisation, -techniken und -mitteln für die Abwicklung eines Projektes. (DIN 69901)",
-            "durchführung": "kontinuierlich",
+            "Durchführung": "kontinuierlich",
             "Wissensfelder":{
                 "Integrationsmanagement": {
                     "koordiniert": ["Projektbestandteile", "Projektbeteiligten"]
