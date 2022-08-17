@@ -14,7 +14,7 @@
                 "Abhängig von": ["Projektgröße", "Teamzusammensetzung", "technische Vorgaben"]
             },
             "Arten": {
-                "Unified Process": "setzt UML ein",
+                "Unified Process": ["setzt UML ein", "iterativ"],
                 "Extreme Programming": ["Programmierarbeit steht im mittelpunkt", "flexibel bei Änderungen", "schnelle Ergebnisse"]
             }
         },
@@ -37,9 +37,9 @@
             },
             "Konsequenz der Softwarekrise": {
                 "neuentwickelte Verfahren": {
-                    "OOA": "Objektorientierte Analyse",
-                    "OOD": "Objektorientiertes Design",
-                    "OOP": "Objektorientierte Programmierung"
+                    "OOA": "objektorientierte Analyse",
+                    "OOD": "objektorientiertes Design",
+                    "OOP": "objektorientierte Programmierung"
                 },
                 "Ansatz": "reale Elemente werden programmatisch abgebildet",
                 "Ursprünge": "Programmiersprache Smalltalk"
@@ -146,6 +146,23 @@
                         "Arbeitsmittel-": ["Kapazitäten", "Nachbestellungen", "Lieferzeiten"]
                     }
                 }
+            }
+        },
+        "Analyseverfahren":{
+            "Formen":{
+                "Systemanalyse": {
+                    "Verhalten": {
+                        "generell": "Anwendungsfälle (Use Cases)",
+                        "Extreme Programming": "User Stories"
+                    }
+                },
+                "Datenanalyse": {},
+                "Prozessanalyse": {}
+            },
+            "Methoden":{
+                "strukturierte Analyse": "",
+                "objektorientierte Analyse": "",
+
             }
         }
     }
