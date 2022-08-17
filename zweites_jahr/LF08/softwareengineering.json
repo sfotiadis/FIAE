@@ -32,7 +32,7 @@
             },
             "Unit-Tests":{
                 "allgemein": "Testen von Software",
-                "Test-first-Ansatz": ["Code funktioniert jederzeit", "jede Klasse besitzt einen Test"]
+                "Test-first-Ansatz": ["Tests vor eigentlicher Implementierung geschrieben", "Code funktioniert jederzeit", "jede Klasse besitzt einen Test"]
             }
         }
     },
