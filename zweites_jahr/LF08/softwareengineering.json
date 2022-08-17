@@ -5,7 +5,7 @@
             "linear": "Wasserfallmodell",
             "iterativ": "Spiralmodell"
         },
-        "Projektphasen": ["Planung", "Analyse", "Entwurf", "Implementierung", "Test","Dokumentation"],
+        "Projektphasen": ["Planung", "Analyse", "Entwurf", "Implementierung", "Test", "Dokumentation"],
         "Phasenausprägung": {
             "variiert je nach": ["Projektgröße", "Teamgröße", "Entwicklungsprozess"]
         },
@@ -19,8 +19,17 @@
             }
         },
         "Arbeitsmittel": {
-            "UML": "Unified Modeling Language",
-            "Entwurfsmuster": "Design Patterns; ",
+            "UML": {
+                "steht für": "Unified Modeling Language",
+                "Darstellung von": ["Analyse", "Entwurf"],
+                "ist": ["leicht nachvollziehbar", "fach-/prozessübergreifend"]
+            },
+            "Entwurfsmuster": {
+                "englisch": "Design Patterns",
+                "bieten": {
+                    "Musterlösungen für": "gängige Entwurfsprobleme"
+                } 
+            },
             "Unit-Tests":{
                 "allgemein": "Testen von Software",
                 "Test-first-Ansatz": ["Code funktioniert jederzeit", "jede Klasse besitzt einen Test"]
@@ -148,7 +157,7 @@
                 }
             }
         },
-        "Analyseverfahren":{
+        "WIP: Analyseverfahren":{
             "Formen":{
                 "Systemanalyse": {
                     "Verhalten": {
@@ -161,7 +170,7 @@
             },
             "Methoden":{
                 "strukturierte Analyse": "",
-                "objektorientierte Analyse": "",
+                "objektorientierte Analyse": ""
 
             }
         }
