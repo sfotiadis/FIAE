@@ -1,0 +1,24 @@
+{
+    "Dienste": {
+        "allgemein": "stellen Funktionen zur Verfügung (was?)",
+        "bieten": ["Daten", "Informationen", "Konfiguration"],
+        "für": {
+            "Netzwerkbetrieb": ["DHCP-Server","DNS-Server"],
+            "Betriebssysteme": "Loadbalancer",
+            "Anwender und Anwendungen": ["WWW", "E-Mail"]
+        },
+        "benutzen": "Protokolle" 
+    },
+    "Protokolle": {
+        "allgemein": ["gewährleisten Kommunikation", "transportieren Daten"],
+        "arbeiten auf": "unterschiedliche Ebenen",
+        "transportieren": "Daten",
+        "Beispiele": ["HTTP", "DHCP", "IP", "TCP/UDP", "ARP"]
+    },
+    "Beispiele":{
+        "WWW": ["HTTP", "HTTPS"],
+        "E-Mail": ["SMTP", "IMAP"],
+        "DNS": ["TCP", "UDP"],
+        "DHCP": "DHCP"
+    }
+}
