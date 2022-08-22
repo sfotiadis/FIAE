@@ -1,0 +1,16 @@
+@startuml
+left to right direction
+actor "Kunde" as customer
+rectangle Getränkeautomat {
+  usecase "Nummer eingeben" as UC1
+  usecase "Zeige Preis an" as UC2
+  usecase "Preis bezahlen" as UC3
+  usecase "Ausgewähltes Getränk wird ausgegeben" as UC4
+}
+customer --> UC1
+(UC1) .> UC2 : <<include>>
+(UC1) .> UC3 : <<extend>>
+customer --> UC3
+(UC4) <. (UC3) : <<extend>> {ausreichend eingezahlt}
+customer <-- (UC4)
+@enduml
