@@ -1,0 +1,37 @@
+{
+    "Grundlagen der Elektrotechnik": {
+        "elektrische Spannung": {
+            "Einheit": "Volt [V]",
+            "Formelzeichen": "U",
+            "Formel": "U = R * I", 
+            "entsteht durch": "Ladungstrennung",
+            "Spannungsquelle": "Spannungsbezugspfeil + -|i- -",
+            "maximal bei Gleichspannung": "60 V"
+        },
+        "elektrischer Strom": {
+            "Einheit": "Ampere [A]",
+            "Formelzeichen": "I",
+            "Formel": "I = U / R",
+            "ist": "Ladung pro Zeiteinheit",
+            "technische Stromrichtung": "von positiv zu negativ"
+        },
+        "elektrischer Widerstand": {
+            "Einheit": "Ohm [Ω]",
+            "Formelzeichen": "R",
+            "Formel": "R = U / I",
+            "Effekt": "bremst die Stromstärke",
+            "Verhältnis": {
+                "I": "~ 1/R",
+                "U": "~ I"
+            },
+            "Mensch": "ca. 1000 Ω"
+        },
+        "ohmsches Gesetz": "elektrischer Strom proportional zur elektrischen Spannung",
+        "elektrische Leistung": {
+            "Einheit": "Watt [W]",
+            "Formelzeichen": "P",
+            "Formel": "P = U * I"
+        },
+        "geschlossener Stromkreis": ["Spannungsquelle", "Leiter", "Verbraucher"]
+    }
+}
