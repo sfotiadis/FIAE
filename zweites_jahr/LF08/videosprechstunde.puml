@@ -1,0 +1,16 @@
+@startuml
+left to right direction
+actor "Nutzer" as USER
+actor "Mitarbeiter" as EMPLOYEE
+rectangle Videosprechstunde {
+  usecase "Informationen ansehen" as SHOW
+  usecase "einloggen" as LOGIN
+  usecase "Informationen bearbeiten" as EDIT
+}
+USER -- SHOW
+USER -- LOGIN
+(LOGIN) <. SHOW : <<extend>> 
+(LOGIN) <. EDIT : <<extend>>
+EMPLOYEE -- EDIT
+USER <|- EMPLOYEE
+@enduml

@@ -7,10 +7,10 @@ rectangle Getränkeautomat {
   usecase "Preis bezahlen" as UC3
   usecase "Ausgewähltes Getränk wird ausgegeben" as UC4
 }
-customer --> UC1
+customer -- UC1
 (UC1) .> UC2 : <<include>>
 (UC1) .> UC3 : <<extend>>
-customer --> UC3
+customer -- UC3
 (UC4) <. (UC3) : <<extend>> {ausreichend eingezahlt}
-customer <-- (UC4)
+customer -- (UC4)
 @enduml
