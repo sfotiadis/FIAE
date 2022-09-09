@@ -1,2 +1,2 @@
 # Notizen zum zweiten Ausbildungsjahr
-*stand: August 2022*
+*Stand: September 2022*
