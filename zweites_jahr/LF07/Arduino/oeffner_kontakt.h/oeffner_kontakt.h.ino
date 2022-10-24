@@ -1,9 +1,9 @@
 /*
   Wired open/closed sensor
 
-  This program uses pinMode(INPUT_PULLUP) to read the status of an NC open/closed sensor. 
-  
-  On opening/closing the status will be printed to the Serial Monitor.
+    This program uses pinMode(INPUT_PULLUP) to read the status of an NC open/closed sensor. 
+    
+    On opening/closing the status will be printed to the Serial Monitor.
 
   The circuit:
 

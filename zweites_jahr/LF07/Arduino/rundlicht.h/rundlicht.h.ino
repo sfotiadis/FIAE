@@ -2,7 +2,9 @@
   Rundlicht mit einer LED
 
     Hierbei soll ein Rundlicht, ähnlich wie bei einem
+
     Fahrzeug der Müllabfuhr, mit einer am Arduino 
+
     angeschlossenen externen LED simuliert werden.
 
   Die Schaltung
