@@ -29,8 +29,8 @@
 */
 
 // Pins für externe LEDs definieren
-int led0 = 12; 
-int led1 = 13;
+const int led0 = 12; 
+const int led1 = 13;
 
 //Einstellungen fürs Leuchtverhalten
 int lang = 500;             //lange Dauer

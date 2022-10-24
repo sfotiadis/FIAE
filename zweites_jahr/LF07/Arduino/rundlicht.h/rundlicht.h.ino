@@ -21,7 +21,7 @@
   von Spiridon Fotiadis
 */
 
-int led = 13; // Pin für externe LED definieren
+const int led = 13; // Pin für externe LED definieren
 
 //Leuchtdauer festlegen
 int lang = 500;
