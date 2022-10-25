@@ -15,28 +15,34 @@
 
   by Spiridon Fotiadis
 */
+int pin = A1;
+int relay = 1;
+
 int detectorStatus;
 
 void setup() {
   Serial.begin(9600);
   
-  pinMode(2, INPUT_PULLUP);
+  pinMode(pin, INPUT_PULLUP);
+  pinMode(relay, OUTPUT);         //relay for alarm
   pinMode(LED_BUILTIN, OUTPUT);
 
-  detectorStatus = digitalRead(2);
+  detectorStatus = digitalRead(pin);
 }
 
 void loop() {
-  int detectorReading = digitalRead(2);
+  int detectorReading = digitalRead(pin);
   if (detectorReading != detectorStatus) {
     if (detectorReading == HIGH) {
   
       digitalWrite(LED_BUILTIN, HIGH);
+      digitalWrite(relay, HIGH);
       Serial.println("object opened");
   
     } else {
   
       digitalWrite(LED_BUILTIN, LOW);
+      digitalWrite(relay, LOW);
       Serial.println("object closed");
 
   

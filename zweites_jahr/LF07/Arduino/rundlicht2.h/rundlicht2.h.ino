@@ -29,16 +29,16 @@
 */
 
 // Pins für externe LEDs definieren
-const int led0 = 12; 
-const int led1 = 13;
+const int led0 = 6; 
+const int led1 = 7;
 
 //Einstellungen fürs Leuchtverhalten
-int lang = 500;             //lange Dauer
-int schritte = 8;           //wie oft es kurz aufblinkt
-int kurz = lang / schritte; //kurze Dauer
+int lang = 200;             //lange Dauer
+int schritte = 1;           //wie oft es kurz aufblinkt
+int kurz = 75; //kurze Dauer
 
 //angegebene LED blinkt auf
-void blinken(int led, int dauer, int schritte) {
+void blinken(int led, int dauer, int wiederholung) {
   for (int i = 0; i<= wiederholung; i++) {
     digitalWrite(led, HIGH);   // LED einschalten
     delay(dauer);              // übergebene Dauer warten
