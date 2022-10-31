@@ -15,23 +15,52 @@
 
   by Spiridon Fotiadis
 */
-int pin = A1;
+int doorSensor = A1;
+int motionDetector = A2;
 int relay = 1;
 
-int detectorStatus;
+int doorStatus;
+int detectorStatus
 
 void setup() {
   Serial.begin(9600);
   
-  pinMode(pin, INPUT_PULLUP);
+  pinMode(doorSensor, INPUT_PULLUP);
+  pinMode(motionDetector, INPUT)
   pinMode(relay, OUTPUT);         //relay for alarm
   pinMode(LED_BUILTIN, OUTPUT);
 
-  detectorStatus = digitalRead(pin);
+  doorStatus = digitalRead(doorSensor);
+  detectorStatus = digitalRead(motionDetector);
+
+
 }
 
-void loop() {
-  int detectorReading = digitalRead(pin);
+int check_door(){
+  int doorReading = digitalRead(doorSensor);
+  if (doorReading != doorStatus) {
+    if (doorReading == HIGH) {
+  
+      digitalWrite(LED_BUILTIN, HIGH);
+      digitalWrite(relay, HIGH);
+      Serial.println("object opened");
+  
+    } else {
+  
+      digitalWrite(LED_BUILTIN, LOW);
+      digitalWrite(relay, LOW);
+      Serial.println("object closed");
+
+  
+    }
+    doorStatus = doorReading;
+  }
+  return  1;
+}
+
+int check_motion(){
+  int detectorReading = digitalRead(motionDetector);
+
   if (detectorReading != detectorStatus) {
     if (detectorReading == HIGH) {
   
@@ -49,4 +78,9 @@ void loop() {
     }
     detectorStatus = detectorReading;
   }
+  return  1;
+}
+
+void loop() {
+
 }
