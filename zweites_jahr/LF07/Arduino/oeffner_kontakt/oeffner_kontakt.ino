@@ -24,7 +24,7 @@ void setup() {
   Serial.begin(9600);
   
   pinMode(pin, INPUT_PULLUP);
-  pinMode(relay, OUTPUT);         //relay for alarm
+  pinMode(relay, OUTPUT);         // relay for alarm
   pinMode(LED_BUILTIN, OUTPUT);
 
   detectorStatus = digitalRead(pin);

@@ -24,9 +24,9 @@
 const int led = 13; // Pin für externe LED definieren
 
 //Leuchtdauer festlegen
-int lang = 500;
-int schritte = 8;
-int kurz = lang / schritte;
+int lang = 200;
+int schritte = 1;
+int kurz = 75;
 
 
 void blinken(int dauer, int wiederholung) {
