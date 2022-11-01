@@ -56,6 +56,4 @@ void loop() {
     // öffnet sich die Luke für 1 Sekunde
     automat.fuettern(1000);
   }
-  
-
 }
