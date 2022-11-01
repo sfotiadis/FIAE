@@ -48,7 +48,14 @@ void setup() {
 }
 
 void loop() {
-  // die Luke öffnet sich für 1 Sekunde
-  automat.fuettern(1000);
+  // ermittelt die aktuelle Zeit
+  DateTime now = rtc.now();
+
+  // wenn die Aktuelle Zeit gleich der Fütterungszeit
+  if(now.hour() == fuetterungszeit){
+    // öffnet sich die Luke für 1 Sekunde
+    automat.fuettern(1000);
+  }
+  
 
 }
