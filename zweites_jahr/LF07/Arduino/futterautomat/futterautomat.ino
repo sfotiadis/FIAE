@@ -49,10 +49,10 @@ void setup() {
 
 void loop() {
   // ermittelt die aktuelle Zeit
-  DateTime now = rtc.now();
+  DateTime aktuelleZeit = rtc.now();
 
-  // wenn die Aktuelle Zeit gleich der Fütterungszeit
-  if(now.hour() == fuetterungszeit){
+  // wenn die Aktuelle Stunde gleich der Fütterungszeit ist
+  if(aktuelleZeit.hour() == fuetterungszeit){
     // öffnet sich die Luke für 1 Sekunde
     automat.fuettern(1000);
   }
