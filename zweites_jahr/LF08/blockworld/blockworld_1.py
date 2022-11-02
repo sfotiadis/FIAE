@@ -182,7 +182,7 @@ def b_key_pressed(world:World):
     house.change_wall_material("default:sand")
     house.build()
 
-
-world = World()
-world.build_key_pressed = b_key_pressed
-world.run()
+if __name__ == "__main__":
+    world = World()
+    world.build_key_pressed = b_key_pressed
+    world.run()
