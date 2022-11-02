@@ -1,0 +1,30 @@
+Public, Protected, Private
+
+Kontrollieren Zugriff
+    __private   - kein Zugriff außerhalb der Klasse
+    _protected  - Zugriff nur innerhalb einer Klasse und ihren Sub-Klassen, die von ihr erben
+    public      - Member können auch außerhalb der Klasse zugegriffen werden 
+
+in Python kann trotzdem auf alle zugegriffen werden
+
+    Variable
+        private     Objekt._Klasse__Variable
+        protected   Objekt._Variable
+
+    Funktion
+        private     Objekt._Klasse__Funktion
+        protected   Objekt._Funktion
+
+
+Klassendiagramm
+
+Pfeile
+
+    ->  Vererbung
+    -<> Aggregation (hat)
+
+Sichtbarkeit
+
+    + public
+    # protected
+    - private 
