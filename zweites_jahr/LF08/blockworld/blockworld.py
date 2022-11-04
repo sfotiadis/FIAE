@@ -4,11 +4,11 @@ HEIGHT = 5
 WIDTH = 6
 
 def build_air(self, y: int):
-            for x in range(2, 4):
-                if self.rotated:
-                    self._bw.setBlock(self.pos[0], self.pos[1] + y, self.pos[2] +  x, self.window_material_id)
-                else:
-                    self._bw.setBlock(self.pos[0] + x, self.pos[1] + y, self.pos[2], self.window_material_id)
+    for x in range(2, 4):
+        if self.rotated:
+            self._bw.setBlock(self.pos[0], self.pos[1] + y, self.pos[2] +  x, self.window_material_id)
+        else:
+            self._bw.setBlock(self.pos[0] + x, self.pos[1] + y, self.pos[2], self.window_material_id)
 
 class Wall:
     def __init__(self, pos: tuple[3], bw: World) -> None:
