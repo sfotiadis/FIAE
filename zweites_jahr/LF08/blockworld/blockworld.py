@@ -3,6 +3,13 @@ from pyblockworld import World
 HEIGHT = 5
 WIDTH = 6
 
+def build_air(self, y: int):
+            for x in range(2, 4):
+                if self.rotated:
+                    self._bw.setBlock(self.pos[0], self.pos[1] + y, self.pos[2] +  x, self.window_material_id)
+                else:
+                    self._bw.setBlock(self.pos[0] + x, self.pos[1] + y, self.pos[2], self.window_material_id)
+
 class Wall:
     def __init__(self, pos: tuple[3], bw: World) -> None:
         self.width: int = WIDTH
@@ -14,8 +21,8 @@ class Wall:
 
     def build(self) -> None:
         for y in range(-1, self.height):
-            if y == 0:
-                continue
+            if y == 0: continue
+            
             for x in range(self.width):
                 if self.rotated:
                     self._bw.setBlock(self.pos[0], self.pos[1] + y, self.pos[2] + x, self.material_id)
@@ -28,34 +35,10 @@ class WallWithWindow(Wall):
         self.window_material_id: str = "air"
 
     def build(self) -> None:
-        def build_row(y: int):
-            for x in range(self.width):
-                if self.rotated:
-                    self._bw.setBlock(self.pos[0]  , self.pos[1] + y, self.pos[2] + x, self.material_id)
-                else:
-                    self._bw.setBlock(self.pos[0] + x, self.pos[1] + y, self.pos[2] , self.material_id)
+        super().build()
         
-        def build_window(y: int):
-            for x in range(self.width):
-                if self.rotated:
-                    if x==2 or x==3: 
-                        self._bw.setBlock(self.pos[0], self.pos[1] + y, self.pos[2] + x, self.window_material_id)
-                    else:
-                        self._bw.setBlock(self.pos[0], self.pos[1] + y, self.pos[2] + x, self.material_id)
-                else:
-                    if x==2 or x==3:
-                        self._bw.setBlock(self.pos[0] + x, self.pos[1] + y, self.pos[2], self.window_material_id)
-                    else:
-                        self._bw.setBlock(self.pos[0] + x, self.pos[1] + y, self.pos[2], self.material_id)
-        
-        for y in range(-1, self.height):
-            if y == 0:
-                continue
+        for y in range(1, 3): build_air(self, y)
 
-            if y == 1 or y == 2:
-                build_window(y)
-            else:
-                build_row(y)
                   
 class WallWithDoor(Wall):
     def __init__(self, pos: tuple[3], bw: World) -> None:
@@ -63,34 +46,13 @@ class WallWithDoor(Wall):
         self.window_material_id: str = "air"
         
     def build(self):
-        def build_row(y: int) -> None:
-            for x in range(self.width):
-                if self.rotated:
-                    self._bw.setBlock(self.pos[0], self.pos[1] + y, self.pos[2] + x, self.material_id)
-                else:
-                    self._bw.setBlock(self.pos[0] + x, self.pos[1] + y, self.pos[2], self.material_id)
-        
-        def build_door(y: int):
-            for x in range(self.width):
-                if self.rotated:
-                    if x==2 or x==3:
-                        self._bw.setBlock(self.pos[0], self.pos[1] + y, self.pos[2] +  x, self.window_material_id)
-                    else:
-                        self._bw.setBlock(self.pos[0], self.pos[1] + y, self.pos[2] + x, self.material_id)
-                else:
-                    if x==2 or x==3:
-                        self._bw.setBlock(self.pos[0] + x, self.pos[1] + y, self.pos[2], self.window_material_id)
-                    else:
-                        self._bw.setBlock(self.pos[0] + x, self.pos[1] + y, self.pos[2], self.material_id)
-        
-        for y in range(-1, self.height):
-            if y == 0:
-                continue
+        super().build()
 
-            if y <= 2:
-                build_door(y)
-            else:
-                build_row(y)
+        for y in range(-1, 3):
+            if y == 0: continue
+          
+            build_air(self, y)
+            
 
 class Roof:
     def __init__(self, pos: tuple[3], bw: World) -> None:
@@ -104,17 +66,18 @@ class Roof:
         for z in range(self.depth):
             for x in range(self.width):
                self.__bw.setBlock(self.pos[0] + x, self.pos[1] + HEIGHT, self.pos[2] + z, self.material_id)
-        pass
 
 class House:
     def __init__(self, pos: tuple[3], bw: World) -> None:
+        
         self.pos: tuple[3] = pos
         self.__bw: World = bw
+
         self.wallFront: Wall = WallWithDoor((self.pos[0] , self.pos[1], WIDTH - 1 + self.pos[2]), self.__bw)
-        self.wallLeft: Wall = WallWithWindow((WIDTH - 1 + self.pos[0], self.pos[1], self.pos[2]), self.__bw)
+        self.wallLeft: Wall  = WallWithWindow((WIDTH - 1 + self.pos[0], self.pos[1], self.pos[2]), self.__bw)
         self.wallRight: Wall = WallWithWindow((self.pos[0], self.pos[1], self.pos[2]), self.__bw)
-        self.wallBack: Wall = Wall((self.pos[0], self.pos[1], self.pos[2] ), self.__bw)
-        self.roof: Roof = Roof((self.pos[0], self.pos[1], self.pos[2]),self.__bw)
+        self.wallBack: Wall  = Wall((self.pos[0], self.pos[1], self.pos[2] ), self.__bw)
+        self.roof: Roof      = Roof((self.pos[0], self.pos[1], self.pos[2]),self.__bw)
 
     def build(self) -> None:
         self.wallFront.build()
@@ -126,10 +89,10 @@ class House:
         self.roof.build()
 
     def change_wall_material(self, new_material_id: str) -> None:
-        self.wallFront.material_id = new_material_id
-        self.wallLeft.material_id = new_material_id
-        self.wallRight.material_id = new_material_id
-        self.wallBack.material_id = new_material_id
+        self.wallFront.material_id  = new_material_id
+        self.wallLeft.material_id   = new_material_id
+        self.wallRight.material_id  = new_material_id
+        self.wallBack.material_id   = new_material_id
 
 '''
 #build two plain walls
@@ -179,7 +142,6 @@ def b_key_pressed(world:World):
 def b_key_pressed(world:World):
     x,y,z = world.player_position()
     house = House((x, y, z), world)
-    house.change_wall_material("default:sand")
     house.build()
 
 if __name__ == "__main__":
