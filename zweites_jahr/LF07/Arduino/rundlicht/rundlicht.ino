@@ -43,7 +43,7 @@ void setup() {
 }
 
 void loop() {
-  blinken(kurz, schritte); // blinkt kurz
+  //blinken(kurz, schritte); // blinkt kurz
   digitalWrite(led, HIGH); // LED einschalten
   delay(lang);             // wartet lang (das Licht ist auf der anderen Seite)
   blinken(kurz, schritte); // blinkt kurz
