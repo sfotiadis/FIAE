@@ -6,10 +6,13 @@ Manche Boards, wie der Arduino Mega, verfügen über mehrere solcher Schnittstel
    
 ## Serial Funktionen
 *.begin()*
+
     öffnet den gewählten seriellen Port und setzt die Datenrate(Baud). 
    
 *.print()* 
+
     gibt eine Zeichenkette ohne Zeilenumbruch aus.
   
 *.println()* 
+
     gibt eine Zeichenkette aus und setzt einen Zeilenumbruch.
