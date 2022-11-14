@@ -1,12 +1,26 @@
 /*
- * Serial
+ * SerialTest
  * 
  * Demonstriert die Serial Funktionalität
  * 
  *  - gibt jeden Sekunde den Namen aus
  *  
- *  - zählt die Anzahl der Tastendrucke und gibt diese aus
+ *  
+ * Die Schaltung
  * 
+ *  - Tastschalter (generisch) an 5V
+ *   
+ *  auf der Ausgangsseite des Tasters:
+ *   
+ *  - 10 kOhm Pulldown-Widerstand zu GND (Masse);
+ *   
+ *  parallel zum Widerstand:
+ *   
+ *  - Verbindung zu Pin 7
+ *  
+ *************************************************************************  
+ *************************************************************************
+ *  
  * 
  * Serial (allgemein)
  * 
@@ -39,23 +53,22 @@
  *  
  */
 
+// Tasterbezogene Variablen
+int tasterPin = 7;        
+int tasterStatus = LOW;     
+int tasterZaehler = 0;
 
-int tasterPin = 7;
-
+// Zeitbezogene Variablen
 int startZeit = millis();  // Ermittle Millisekunden seit Programmstart
 int vergangeneZeit = 0;
 
-int tasterStatus = LOW;
-int tasterZaehler = 0;
 
 void setup() {
   Serial.begin(9600);
-
-  pinMode(tasterPin, INPUT);
-  
+  pinMode(tasterPin, INPUT); //weist tasterPin als Input aus
 }
 
-void serialtest() {
+void loop() {
   // Ermittle Millisekunden seit Programmstart und speichere zwischen
   int temp = millis();
 
@@ -66,28 +79,4 @@ void serialtest() {
     // Namen ausgeben
     Serial.println("Name Nachname");
   }
-}
-
-void serialbutton() {
-  int gelesenerStatus = digitalRead(tasterPin);
-  // wenn der Taster gedrückt ist und vorher aus war
-  if(gelesenerStatus == HIGH && tasterStatus == LOW) {
-    // Zaehler um eins hochzaehlen
-    tasterZaehler++;
-    
-    // Zaehler ausgeben
-    Serial.println(tasterZaehler);  
-
-    tasterStatus = HIGH;
-
-  } else if(gelesenerStatus == LOW) {
-    tasterStatus = LOW;
-  }
-  // um 50 Millisekunden verzögern um sauber zu wechseln
-    delay(50);
-}
-
-void loop() {
-  serialtest();
-  serialbutton();
 }
