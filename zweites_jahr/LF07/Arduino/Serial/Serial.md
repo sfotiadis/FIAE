@@ -5,14 +5,11 @@ Für die Serielle Kommunikation über USB, werden die Pins 0 als RX (Receive) un
 Manche Boards, wie der Arduino Mega, verfügen über mehrere solcher Schnittstellen (4 Stück).
    
 ## Serial Funktionen
-*.begin()*
+`.begin()`
+<p>öffnet den gewählten seriellen Port und setzt die Datenrate(Baud). </p>
 
-    öffnet den gewählten seriellen Port und setzt die Datenrate(Baud). 
-   
-*.print()* 
+`.print()` 
+<p>gibt eine Zeichenkette ohne Zeilenumbruch aus.</p>
 
-    gibt eine Zeichenkette ohne Zeilenumbruch aus.
-  
-*.println()* 
-
-    gibt eine Zeichenkette aus und setzt einen Zeilenumbruch.
+`.println()`
+<p>gibt eine Zeichenkette aus und setzt einen Zeilenumbruch.</p>
