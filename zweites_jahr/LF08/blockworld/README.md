@@ -1,20 +1,29 @@
 # Erläuterungen
 
-## Public, Protected, Private
+### __private
+<p>kein Zugriff außerhalb der Klasse</p>
 
-'__private'   - kein Zugriff außerhalb der Klasse
-'_protected'  - Zugriff nur innerhalb einer Klasse und ihren Sub-Klassen, die von ihr erben
-'public'      - Member können auch außerhalb der Klasse zugegriffen werden 
+### _protected 
+<p>Zugriff nur innerhalb einer Klasse und ihren Sub-Klassen, die von ihr erben</p>
 
-in Python kann trotzdem auf alle zugegriffen werden!
+### public
+<p>Member können auch außerhalb der Klasse zugegriffen werden</p>
 
-- Variable
-    private     'Objekt._Klasse__Variable'
-    protected   'Objekt._Variable'
+### Schutz umgehen
 
-- Funktion
-    private     'Objekt._Klasse__Funktion'
-    protected   'Objekt._Funktion'
+in Python kann man auf private oder protected Funktionen/Variablen trotzdem zugreifen. Gleichwohl ist davon abzuraten.
+
+Auf private Variablen/Funktionen zugreifen:
+    
+    'Objekt._Klasse__Variable'
+    
+    'Objekt._Klasse__Funktion'
+    
+Auf protected Variablen/Funktionen zugreifen:
+    
+    'Objekt._Variable'
+    
+    'Objekt._Funktion'
 
 
 ## Klassendiagramm
@@ -22,10 +31,13 @@ in Python kann trotzdem auf alle zugegriffen werden!
 - Pfeile
 
     ->  Vererbung
+    
     -<> Aggregation (hat)
 
 - Sichtbarkeit
 
-    '+' public
-    '#' protected
-    '-' private 
+    '+ public'
+    
+    '# protected'
+    
+    '- private' 
