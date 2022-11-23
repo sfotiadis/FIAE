@@ -34,7 +34,7 @@
 
 // Konstanten
 const int tasterPin = 7;            // der Pin des Tasters
-const int ledPin =  LED_BUILTIN;    // der Pin der LED
+const int ledPin =  13;    // der Pin der LED
 
 // Variable Zustände:
 // Komponenten
@@ -60,8 +60,13 @@ void toggleBetrieb() {
   if (tasterStatus == HIGH) {
     ledStatus = !ledStatus;          //LED Status invertieren 
     digitalWrite(ledPin, ledStatus); //LED Pin auf Status setzen
+    
+    while(tasterStatus == HIGH) {
+      delay(20);
+      tasterStatus = digitalRead(tasterPin);
+    }
   }
-  delay(100);
+  delay(50);
 }
 
 void checkBetrieb() {
@@ -105,5 +110,5 @@ void setup() {
 void loop() {
   // Zustand des Tasters ermitteln
   tasterStatus = digitalRead(tasterPin);
-  tippBetrieb();
+  checkBetrieb();
 }
