@@ -102,6 +102,30 @@ void checkBetrieb() {
   }
 }
 
+void checkBetrieb2() {
+  // wenn der Taster gedrückt wird
+  if (tasterStatus == HIGH) {
+    // Startzeit festhalten
+    int start = millis(); 
+
+    // solange der Taster gedrückt bleibt, bleibt das Programm hier stehen
+    while(digitalRead(tasterPin) == HIGH) delay(10); 
+    
+    // nachdem der Taster losgelassen wird, wird die Zeit aus 
+    // der aktuellen Zeit minus der Startzeit ermittelt
+    int ende = millis() - start;
+
+    if(ende >= 1000 && ende <= 2000){
+      // zwischen 1 und 2 Sekunden LED einschalten
+      digitalWrite(ledPin, HIGH);
+    }
+    if(ende >= 4000 && ende <= 5000) {
+      // zwischen 4 und 5 Sekunden LED ausschalten
+      digitalWrite(ledPin, LOW);
+    }
+  }
+}
+
 void setup() {
   pinMode(ledPin, OUTPUT);    // Pin als Ausgang für LED setzen
   pinMode(tasterPin, INPUT);  // Pin als Eingang für Taster setzen
