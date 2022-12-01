@@ -1,13 +1,16 @@
 '''Test-Driven-Development example'''
-from typing import Union
 
 def all_bigger_five(numbers: list[int]) -> bool:
-    number_types = Union[int, float]
+    '''returns true if all numbers in list are bigger than five'''
+
     if not isinstance(numbers, list): return False
+    
     if len(numbers) == 0: return False
-    if all([isinstance(x, number_types) for x in numbers]) == False: return False
+
+    if all([isinstance(x, (int, float)) for x in numbers]) == False: return False
 
     return all([n > 5 for n in numbers])
+
 
 def test_all_bigger_five():
     assert all_bigger_five([6, 9, 13, 25]) == True
