@@ -11,8 +11,8 @@
   von Spiridon Fotiadis
 */
 
-#define echoPin 2 // Pin 2 als echoPin des HC-SR04 definieren 
-#define trigPin 3 // Pin 3 als trigPin des HC-SR04 definieren
+#define echoPin 5 // Pin 5 als echoPin des HC-SR04 definieren 
+#define trigPin 6 // Pin 6 als trigPin des HC-SR04 definieren
 #define buzzerPin 7  // Pin 7 als buzzerPin definieren 
 
 // lokale Variablen
