@@ -49,9 +49,9 @@ void loop() {
   
   // Wenn die Distanz unter einem Meter ist
   if (distance < 100) {
-    tone(buzzer, 1000); // wird ein Ton ausgegeben
+    tone(buzzerPin, 1000); // wird ein Ton ausgegeben
     delay(40);
-    noTone(buzzer);     // Ton wieder ausschalten
+    noTone(buzzerPin);     // Ton wieder ausschalten
     delay(distance*4);  // Distanz mal 4 Milisekunden warten
   }
   delay(100);
