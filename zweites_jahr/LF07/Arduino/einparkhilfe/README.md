@@ -9,7 +9,7 @@ Ultraschall bezeichnet hingegen Schall, dessen Frequenzen zwischen 20 kHz und 1 
 
 Der Ultraschall Sensor strahlt einen kurzen Schallimpuls aus. Dieser verbreitet sich mit Schallgeschwindigkeit (ca. 343,2 m/s) in der Luft. Trifft er auf ein Objekt, wir der Schall zum Sensor zurückgeworfen. Die gemessene Zeit in Mikrosekunden zwischen Aussenden des Schallimpulses und Empfangen des Echos, lässt sich die Distanz berechnen.
 
-z.B. 200 µs * 0.034 cm/µs * 1/2 (für hin und zurück) = 3,4 Meter
+z.B. 200 µs * 0.034 cm/µs * 1/2 (für hin und zurück) = 3,4 cm
 
 ## HC-SR04 Trigpin und Echopin
 
