@@ -15,38 +15,42 @@
 
   by Spiridon Fotiadis
 */
-int pin = A1;
-int relay = 1;
+int contactPin = A1;
+int realyPin = 1;
+int signalLed = LED_BUILTIN;
 
-int detectorStatus;
+int doorStatus;
 
 void setup() {
   Serial.begin(9600);
   
-  pinMode(pin, INPUT_PULLUP);
-  pinMode(relay, OUTPUT);         // relay for alarm
-  pinMode(LED_BUILTIN, OUTPUT);
+  pinMode(contactPin, INPUT_PULLUP);
+  pinMode(realyPin, OUTPUT);         // relay for alarm
+  pinMode(signalLed, OUTPUT);
 
-  detectorStatus = digitalRead(pin);
+  doorStatus = digitalRead(contactPin);
 }
 
 void loop() {
-  int detectorReading = digitalRead(pin);
-  if (detectorReading != detectorStatus) {
-    if (detectorReading == HIGH) {
+  checkDoor();
   
-      digitalWrite(LED_BUILTIN, HIGH);
-      digitalWrite(relay, HIGH);
+}
+
+void checkDoor(){
+  int contactStatus = digitalRead(contactPin);
+  if (contactStatus != doorStatus) {
+    if (contactStatus == HIGH) {
+  
+      digitalWrite(signalLed, HIGH);
+      digitalWrite(realyPin, HIGH);
       Serial.println("object opened");
-  
     } else {
   
-      digitalWrite(LED_BUILTIN, LOW);
-      digitalWrite(relay, LOW);
+      digitalWrite(signalLed, LOW);
+      digitalWrite(realyPin, LOW);
       Serial.println("object closed");
-
-  
     }
-    detectorStatus = detectorReading;
+    doorStatus = contactStatus;
+    delay(100);
   }
 }

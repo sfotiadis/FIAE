@@ -36,11 +36,11 @@ void loop() {
   delayMicroseconds(10);
   digitalWrite(trigPin, LOW);
 
-  // echoPin lesen, gibt die Reisedauer des Echos in microsekunden wieder
+  // echoPin lesen, gibt die Reisedauer des Echos in mikrosekunden wieder
   duration = pulseIn(echoPin, HIGH);
 
   // Distanz berechnen
-  distance = duration * 0.034 / 2; // Schallgeschwindigkeit geteilt durch zwei für hin und zurück
+  distance = duration * 0.034 / 2; // Schallgeschwindigkeit cm/mikrosekunden geteilt durch zwei für hin und zurück
   
   // Distanz in cm ausgeben
   Serial.print("Distanz: ");

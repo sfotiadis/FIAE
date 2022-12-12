@@ -22,7 +22,7 @@ RTC_DS3231 rtc;       // real time clock
 int servo_pin = 9;
 int pos = 0;
 int end_pos = 180;
-int steps = 10;
+int steps = 20;
 
 // feeding configuration
 int feedingTime = 19;
@@ -42,7 +42,7 @@ void serve(int miliseconds) {
 
 void setup() {
   shutter_servo.attach(servo_pin); 
-
+  shutter_servo.write(0);
   while(!Serial);
 
   Serial.begin(9600);
@@ -57,8 +57,10 @@ void setup() {
 
 void loop() {
   DateTime now = rtc.now();
-
-  if(now.hour() == feedingTime){
+  //serve(100);
+  delay(1000);
+  Serial.println(String("DateTime::TIMESTAMP_TIME:\t")+now.timestamp(DateTime::TIMESTAMP_TIME));
+  if(now.hour() == 20 and now.minute() == 44 and now.second()== 00){
     serve(1000);
   }
 }

@@ -21,7 +21,7 @@ def test_all_bigger_five():
 
     assert all_bigger_five([]) == False
 
-    assert all_bigger_five([5,"as",2]) == False
+    assert all_bigger_five([5,"foo",2]) == False
 
     assert all_bigger_five(True) == False
 

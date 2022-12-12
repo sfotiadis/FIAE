@@ -12,3 +12,9 @@ class HouseTest(unittest.TestCase):
         self.assertEqual(self.house.wallBack.material_id, "default:sand")
         self.assertEqual(self.house.wallLeft.material_id, "default:sand")
         self.assertEqual(self.house.wallRight.material_id, "default:sand")
+
+if __name__ == "__main__":
+    houseTest = HouseTest()
+    houseTest.setUp()
+    houseTest.test_change_wall_material()
+    print("test passed")
