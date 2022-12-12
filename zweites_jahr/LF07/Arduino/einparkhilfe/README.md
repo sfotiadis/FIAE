@@ -13,7 +13,7 @@ z.B. 200 µs * 0.034 cm/µs * 1/2 (für hin und zurück) = 3,4 Meter
 
 ## HC-SR04 Trigpin und Echopin
 
-Der Trigpin wird dazu verwendet, einen Ultraschallimpuls auszulösen. Dabei wird der Pin für 10 Mikrosekunden auf HIGH gesetzt. 
+Der Trigpin wird dazu verwendet, einen Ultraschallimpuls auszulösen. Dabei wird der Pin für mindestens 10 Mikrosekunden auf HIGH gesetzt. Sobald die Signalflanke fällt, sendet der Sensor nach 250 µs ein 40 kHz Signal für die Dauer von 200 µs.
 Der Echopin wird beim Aussenden ders Impulses auf HIGH gesetzt und verbleibt in diesem Zustand so lange, bis das Echo empfangen wurde.
 Die Dauer, in der der Echopin auf HIGH ist wird dazu genutzt, um die Distanz zu berechnen.
 
