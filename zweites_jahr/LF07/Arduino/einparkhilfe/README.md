@@ -25,7 +25,7 @@ Von Transistor-Transistor-Logik; TTL-Schaltkreise werden i.d.R. mit einer Versor
 
 ## Messgenauigkeit des HC-SR04
 
-| cm (real)   | cm (gemessen)   |  Abweichung in %  |
+|  real (cm)  |  gemessen (cm)  |  Abweichung in %  |
 | :---------: | :-------------: | :---------------: |
 |       1     |   2,35          |     +1,35         |
 |       2     |   2,10          |     +5            |
