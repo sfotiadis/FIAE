@@ -17,7 +17,7 @@
 
 // lokale Variablen
 long duration; // Variable für die Dauer, die das Echo braucht um zurück zu kommen
-int distance;  // Variable für die Distanzmessung 
+float distance;  // Variable für die Distanzmessung 
 
 void setup() {
   pinMode(trigPin, OUTPUT); // trigPin als OUTPUT setzen
@@ -48,11 +48,14 @@ void loop() {
   Serial.println(" cm");
   
   // Wenn die Distanz unter einem Meter ist
-  if (distance < 100) {
+  if (distance < 10 and distance > 3) {
     tone(buzzerPin, 1000); // wird ein Ton ausgegeben
     delay(40);
     noTone(buzzerPin);     // Ton wieder ausschalten
-    delay(distance*4);  // Distanz mal 4 Milisekunden warten
+    delay(distance*40);  // Distanz mal 4 Milisekunden warten
+  }
+  if (distance < 3){
+    tone(buzzerPin, 1000);
   }
   delay(100);
 }
